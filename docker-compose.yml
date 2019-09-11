@@ -1,0 +1,15 @@
+version: '3'
+services:
+  nuxt:
+    build:
+      context: ./src
+    container_name: 'line_clone'
+    volumes:
+      - ./src:/var/www
+    environment:
+      PORT: 3000
+      HOST: 0.0.0.0
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
